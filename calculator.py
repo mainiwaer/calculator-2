@@ -29,11 +29,20 @@ while True:
 
     operand = equation_list[0]
 
-    num1 = equation_list[1]
+    num1 = float(equation_list[1])
     
     if len(equation_list)>2:
-        num2 = equation_list[2]
+        num2 = float(equation_list[2])
 
+    if operand == '+':
+        print(add(num1, num2))
+
+    if operand == '-':
+        print(subtract(num1, num2))
     
-        
+    if operand == '*':
+        print(multiply(num1, num2))
+    
+    if operand == '/':
+        print(divide(num1, num2))
     
