@@ -32,10 +32,18 @@ def check_input():
 
         valid_input_list = ["+", "-", "*", "/", "square", "cube", "pow", "mod", "q"]
         number_indexes = [1, 2]
-        if equation_list[0] not in valid_input_list or float(equation_list[number_indexes]) == float:
-            print("That is not a valid operation, try again.")
 
+        if "q" in equation_list:
+            return ["q"]
+
+        if equation_list[0] not in valid_input_list: 
+            print(equation_list[0])
+            print("That is not a valid operation, try again.")
         
+        for number in number_indexes:
+            print(number)
+            if equation_list[number].isnumeric() != True:
+                print("Please use numbers in the equation.")            
 
         else:
             return equation_list
@@ -45,17 +53,16 @@ def check_input():
 
 while True:
 
-    user_equation = check_input()
+    equation_list = check_input()
 
-    if user_equation == "q" or user_equation == "quit":
+    if "q" in equation_list:
         print("I guess I'll calc-u-later! :^)")
         break
-
 
     operand = equation_list[0]
 
     num1 = float(equation_list[1])
-    
+
     if len(equation_list)>2:
         num2 = float(equation_list[2])
 
