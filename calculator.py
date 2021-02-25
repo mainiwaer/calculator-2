@@ -45,4 +45,16 @@ while True:
     
     if operand == '/':
         print(divide(num1, num2))
+
+    if operand == 'square':
+        print(square(num1))
+
+    if operand == 'cube':
+        print(cube(num1))
+
+    if operand == 'pow':
+        print(power(num1, num2))
+
+    if operand == 'mod':
+        print(mod(num1, num2))
     
