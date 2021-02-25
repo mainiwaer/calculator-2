@@ -10,22 +10,47 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 # For each operation type, we need to write a conditional that evaluated for the operator
 # calls function from arithmetic file
 
+
+# Make function that processes input and makes sure it is valid before following through
+    # 
+
+
+
+
+
+
 print("Welcome to The Calculator (part 2)")
 
 # def check_list_length():
 #     if len(equation_list) != 2
+
+def check_input():
+    while True:
+        user_equation_input = input("Enter your equation > ")
+        
+        equation_list = user_equation_input.split(" ")
+
+        valid_input_list = ["+", "-", "*", "/", "square", "cube", "pow", "mod", "q"]
+        number_indexes = [1, 2]
+        if equation_list[0] not in valid_input_list or float(equation_list[number_indexes]) == float:
+            print("That is not a valid operation, try again.")
+
+        
+
+        else:
+            return equation_list
+
     
 
 
 while True:
 
-    user_equation = input("Enter your equation > ")
+    user_equation = check_input()
 
     if user_equation == "q" or user_equation == "quit":
         print("I guess I'll calc-u-later! :^)")
         break
 
-    equation_list = user_equation.split(" ")
 
     operand = equation_list[0]
 
