@@ -12,6 +12,11 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
 print("Welcome to The Calculator (part 2)")
 
+# def check_list_length():
+#     if len(equation_list) != 2
+    
+
+
 while True:
 
     user_equation = input("Enter your equation > ")
@@ -19,4 +24,16 @@ while True:
     if user_equation == "q" or user_equation == "quit":
         print("I guess I'll calc-u-later! :^)")
         break
+
+    equation_list = user_equation.split(" ")
+
+    operand = equation_list[0]
+
+    num1 = equation_list[1]
+    
+    if len(equation_list)>2:
+        num2 = equation_list[2]
+
+    
+        
     
